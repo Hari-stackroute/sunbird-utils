@@ -110,7 +110,7 @@ public class UserRequestValidator extends BaseRequestValidator {
     }
   }
   
-  public void validateUserSignUpV2(Request userRequest) {
+  public void validateUserCreateV4(Request userRequest) {
     validateUserCreateV3(userRequest);
     validateLocationCodes(userRequest);
     validateFrameworkDetails(userRequest);
