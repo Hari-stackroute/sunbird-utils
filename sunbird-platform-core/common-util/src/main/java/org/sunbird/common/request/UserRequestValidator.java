@@ -109,6 +109,12 @@ public class UserRequestValidator extends BaseRequestValidator {
       validatePhone((String) userRequest.getRequest().get(JsonKey.PHONE));
     }
   }
+  
+  public void validateUserSignUpV2(Request userRequest) {
+    validateUserCreateV3(userRequest);
+    validateLocationCodes(userRequest);
+    validateFrameworkDetails(userRequest);
+  }
 
   public void validateCreateUserV3Request(Request userRequest) {
     validateCreateUserRequest(userRequest);
